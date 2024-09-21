@@ -99,15 +99,18 @@ header {
 }
 
 .slider {
-    background-image: url(/images/slider.jpg);
+    width: 100% auto;
+    background: url(/images/slider.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     clip-path: circle(100% at 52% -48%);
     background-clip: var(#262BDB, 15px);
     overflow: hidden;
     position: relative;
-    height: 950px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    min-height: 950px;
+    max-height: max-content;
 }
 
 
@@ -131,7 +134,7 @@ header {
     max-width: 100%;
     margin-top: 30px;
     scale: .9;
-    transform: translatex(-20px);
+    transform: translatex(20px);
 }
 
 @media (min-width:912px) {
@@ -355,6 +358,7 @@ header {
 
 .head p {
     color: var(--colorp);
+    margin-bottom: 60px;
 }
 
 .grid-3 {
@@ -444,7 +448,7 @@ header {
 .whyus .content {
     margin: auto;
     margin-top: -500px;
-    margin-left: 860px;
+    margin-left: 1000px;
     width: 40%;
 
 }
@@ -457,7 +461,7 @@ header {
 }
 
 .whyus .content p {
-    margin-bottom: 15px;
+    margin-bottom: 80px;
     left: 0;
     color: var(--colorp);
 }
@@ -541,21 +545,23 @@ header {
     width: 100%;
 }
 
+.Protfolio head {
+    text-align: center;
+}
 
 .Protfolio::after {
     content: ' ';
-    background-image: url(/images/style.svg);
     width: 395px;
     height: 457px;
     position: absolute;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    top: 290px;
+    top: 260px;
     right: 0;
     transform: scale(-1) translateX(-30px);
     translate: 90px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .Protfolio a {
@@ -564,9 +570,10 @@ header {
 }
 
 .Protfolio img {
+    margin-top: 100px;
     width: 100%;
-    height: 100%;
-    object-fit: scale-down;
+    height: 90%;
+    object-fit: unset;
     scale: 1.4;
 }
 
@@ -607,7 +614,7 @@ header {
 }
 
 .Clients .content {
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .Clients .content .item {
@@ -618,16 +625,21 @@ header {
     height: 500PX;
     width: 430px;
     flex: 0 0 auto;
+    overflow: hidden;
+    margin: 10px 5px;
 }
 
 
 .Clients .content .item .image img {
+    margin: 15px 20px;
+    object-fit: unset;
+    height: auto;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    flex: initial;
 }
 
 .Clients .content .item .caption {
+    margin-left: 70px;
     padding-top: 80px;
     width: 460px;
     padding-left: 90px;
